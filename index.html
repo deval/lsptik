@@ -3,6 +3,10 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/MindElixir.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/painter.js"></script>
     <script>
+      import MindElixir, { E } from 'mind-elixir'
+      import { exportSvg, exportPng } from '../dist/painter'
+      import example from '../dist/example1'
+      
       let mind = new MindElixir({
         el: '#map',
         direction: MindElixir.LEFT,
