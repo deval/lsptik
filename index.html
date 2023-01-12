@@ -1,34 +1,34 @@
 <html>
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/MindElixir.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/painter.js"></script>
-    <script>
-      import MindElixir, { E } from 'mind-elixir'
-      import { exportSvg, exportPng } from '../dist/painter'
-      import example from '../dist/example1'
-      
-      let mind = new MindElixir({
-        el: '#map',
-        direction: MindElixir.LEFT,
-        // or set as data that is return from `.getAllData()`
-        // data: {...},
-        draggable: true, // default true
-        contextMenu: true, // default true
-        toolBar: true, // default true
-        nodeMenu: true, // default true
-        keypress: true, // default true
-      })
-      mind.init(MindElixir.new('new topic'))
-      console.log(mind)      
-    </script>
-    <style>
-      #map {
-        height: 500px;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-  </body>
+    <head>
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/jsmind@0.5/style/jsmind.css"
+        />
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/jsmind@0.5/es6/jsmind.js"
+        ></script>
+        <!--
+            enable draggable node feature
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsmind@0.5/es6/jsmind.draggable-node.js"></script>
+        -->
+    </head>
+    <body>
+        <div id="jsmind_container"></div>
+
+        <script type="text/javascript">
+            var mind = {
+                // 3 data formats were supported ...
+                // see documents for more information
+            };
+            var options = {
+                container: 'jsmind_container',
+                theme: 'orange',
+                editable: true,
+            };
+            var jm = new jsMind(options);
+            jm.show(mind);
+        </script>
+    </body>
 </html>
